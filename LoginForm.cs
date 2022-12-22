@@ -1,0 +1,64 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using SQLite;
+
+namespace ATM_GUI
+{
+    public partial class LoginForm : Form
+    {
+        UserController userController = new UserController();
+
+        public LoginForm()
+        {
+            InitializeComponent();
+        }
+
+        // Switch to RegisterForm
+        private void registerLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new RegisterForm().Show();
+            Close();
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            if (Application.OpenForms.Count == 1)
+                Application.Exit();
+        }
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            // Attempt to find user
+            User user = userController.GetUserByName(username.Text);
+
+            // TriggerFalseInput if user is not found or not matching password
+            if (user == null || user.Password != password.Text) {
+                TriggerFalseInput();
+                return;
+            }
+            // Open Main Form if successful
+            OpenMainForm(user);
+        }
+
+        //@TODO: Implement FalseInput
+        private void TriggerFalseInput()
+        {
+            Debug.WriteLine("Username and password do not match");
+        }
+
+        //@TODO: Implement OpenMainForm
+        private void OpenMainForm(User user)
+        {
+            Debug.WriteLine("Proceed to main form with user: " + user.Name);
+        }
+
+    }
+}
