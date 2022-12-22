@@ -7,18 +7,25 @@ using SQLite;
 
 namespace ATM_GUI
 {
-    internal class User
+    [Table("users")]
+    public class User
     {
-        [PrimaryKey, AutoIncrement]
+        [PrimaryKey, AutoIncrement, Column("id")]
         public int Id { get; set; }
+        [Column("name")]
         public string Name { get; set; }
+        [Column("password")]
         public string Password { get; set; }
-
         private double balance;
+        [Column("balance")]
         public double Balance {
             get { return balance; }
             set { if (value >= 0) balance = value; }
         }
+        [Column("createdAt")]
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        [Column("modifiedAt")]
+        public DateTime ModifiedAt { get; set; } = DateTime.Now;
 
         public User() { }
         public User(string name, string password)

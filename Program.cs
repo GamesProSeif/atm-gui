@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SQLite;
 
 namespace ATM_GUI
 {
@@ -17,19 +16,9 @@ namespace ATM_GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            InitiateDB();
-            Application.Run(new MainForm());
-        }
-
-        static void InitiateDB()
-        {
-            if (!System.IO.File.Exists("database.db3"))
-            {
-                var db = new SQLiteConnection("database.db3");
-                db.CreateTable<User>();
-                db.Close();
-                Console.WriteLine("Created DB");
-            }
+            var loginForm = new LoginForm();
+            loginForm.Show();
+            Application.Run();
         }
     }
 }
