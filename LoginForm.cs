@@ -19,6 +19,41 @@ namespace ATM_GUI
         public LoginForm()
         {
             InitializeComponent();
+            //Placeholder Text for username & pass
+            username.Text = "Enter Your Username";
+            password.Text= "Enter Your Password";
+        }
+        //username and password placeholder text remover
+        private void username_Enter(object sender, EventArgs e)
+        {
+            if(username.Text== "Enter Your Username")
+            {
+                username.Text = "";
+            }
+        }
+        
+        private void password_Enter(object sender, EventArgs e)
+        {
+            if (password.Text == "Enter Your Password")
+            {
+                password.Text = "";
+            }
+        }
+        //username and password placeholder applying after leaving
+        private void username_Leave(object sender, EventArgs e)
+        {
+            if (username.Text == "")
+            {
+                username.Text = "Enter Your Username";
+            }
+        }
+
+        private void password_Leave(object sender, EventArgs e)
+        {
+            if (password.Text == "")
+            {
+                password.Text = "Enter Your Password";
+            }
         }
 
         // Switch to RegisterForm
