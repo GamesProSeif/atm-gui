@@ -20,39 +20,44 @@ namespace ATM_GUI
         {
             InitializeComponent();
             //Placeholder Text for username & pass
-            username.Text = "Enter Your Username";
-            password.Text= "Enter Your Password";
+            username.GotFocus += RUtext;
+            password.GotFocus += RPtext;
+            username.LostFocus += AUtext;
+            password.LostFocus += APtext;
         }
         //username and password placeholder text remover
-        private void username_Enter(object sender, EventArgs e)
+        public void RUtext(object sender, EventArgs e)
         {
-            if(username.Text== "Enter Your Username")
+            if (username.Text == "Enter Your Username")
             {
                 username.Text = "";
+                username.ForeColor = Color.Black;
             }
         }
-        
-        private void password_Enter(object sender, EventArgs e)
+        public void RPtext(object sender, EventArgs e)
         {
             if (password.Text == "Enter Your Password")
             {
                 password.Text = "";
+                password.ForeColor = Color.Black;
             }
         }
         //username and password placeholder applying after leaving
-        private void username_Leave(object sender, EventArgs e)
+        public void AUtext(object sender, EventArgs e)
         {
-            if (username.Text == "")
+            if (String.IsNullOrWhiteSpace(username.Text))
             {
                 username.Text = "Enter Your Username";
+                username.ForeColor = Color.Gray;
             }
         }
 
-        private void password_Leave(object sender, EventArgs e)
+        public void APtext(object sender, EventArgs e)
         {
-            if (password.Text == "")
+            if (String.IsNullOrWhiteSpace(password.Text))
             {
                 password.Text = "Enter Your Password";
+                password.ForeColor = Color.Gray;
             }
         }
 

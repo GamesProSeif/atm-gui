@@ -40,16 +40,18 @@
             // 
             // password
             // 
+            this.password.ForeColor = System.Drawing.Color.Gray;
             this.password.Location = new System.Drawing.Point(134, 221);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(100, 20);
+            this.password.Size = new System.Drawing.Size(125, 20);
             this.password.TabIndex = 0;
+            this.password.Text = "Enter Your Password";
             // 
             // loginButton
             // 
             this.loginButton.Location = new System.Drawing.Point(134, 262);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(100, 23);
+            this.loginButton.Size = new System.Drawing.Size(125, 23);
             this.loginButton.TabIndex = 1;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = true;
@@ -57,10 +59,12 @@
             // 
             // username
             // 
+            this.username.ForeColor = System.Drawing.Color.Gray;
             this.username.Location = new System.Drawing.Point(134, 174);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(100, 20);
+            this.username.Size = new System.Drawing.Size(125, 20);
             this.username.TabIndex = 2;
+            this.username.Text = "Enter Your Username";
             // 
             // label1
             // 
@@ -99,7 +103,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ATM_GUI.Properties.Resources.coolbank1;
-            this.pictureBox1.Location = new System.Drawing.Point(81, 39);
+            this.pictureBox1.Location = new System.Drawing.Point(95, 39);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(208, 87);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
