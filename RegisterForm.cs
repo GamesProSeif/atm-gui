@@ -116,17 +116,19 @@ namespace ATM_GUI
                 TriggerUsernameTakenError();
                 return;
             }
-            //checks password
-            else if (password.Text!=passconfirm.Text) 
+            else if(user==null)
             {
-                if (user != null)
+                //condition to ensure if username is ok removes error
+                UserTaken.Visible = false;
+                if (password.Text != passconfirm.Text)
                 {
-                    UserTaken.Visible = false;
+
+                    TriggerWrongPasswordError();
                     return;
                 }
-                TriggerWrongPasswordError();
-                return;
             }
+            //checks password
+            
 
             // Create new user
             user = new User(username.Text, password.Text);
