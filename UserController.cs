@@ -11,11 +11,8 @@ namespace ATM_GUI
     // Make sure to add UserController as an instance variable to all forms
     internal class UserController
     {
-        // Places database in "Documents" folder
-        private string DatabasePath = System.IO.Path.Combine(
-            Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
-            "atm-gui.db"
-            );
+       
+        private string DatabasePath ="atm-gui.db3";
 
         public UserController()
         {

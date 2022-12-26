@@ -24,6 +24,8 @@ namespace ATM_GUI
             password.GotFocus += RPtext;
             username.LostFocus += AUtext;
             password.LostFocus += APtext;
+            
+            
         }
         //username and password placeholder text remover
         public void RUtext(object sender, EventArgs e)
@@ -36,8 +38,13 @@ namespace ATM_GUI
         }
         public void RPtext(object sender, EventArgs e)
         {
+            
             if (password.Text == "Enter Your Password")
             {
+
+                password.Text = "."; /*I do not know why on earth, but setting this 
+                              * to empty doesnt let the next line work and strikes an error*/
+                password.UseSystemPasswordChar = true;
                 password.Text = "";
                 password.ForeColor = Color.Black;
             }
@@ -54,11 +61,14 @@ namespace ATM_GUI
 
         public void APtext(object sender, EventArgs e)
         {
+            
             if (String.IsNullOrWhiteSpace(password.Text))
             {
                 password.Text = "Enter Your Password";
+                password.UseSystemPasswordChar = false;
                 password.ForeColor = Color.Gray;
             }
+            
         }
 
         // Switch to RegisterForm
@@ -88,10 +98,10 @@ namespace ATM_GUI
             OpenMainForm(user);
         }
 
-        //@TODO: Implement FalseInput
+        //Implement FalseInput
         private void TriggerFalseInput()
         {
-            Debug.WriteLine("Username and password do not match");
+            WrongInfo.Visible = true;
         }
 
         //@TODO: Implement OpenMainForm
