@@ -19,6 +19,56 @@ namespace ATM_GUI
         public LoginForm()
         {
             InitializeComponent();
+            //Placeholder Text for username & pass
+            username.GotFocus += RUtext;
+            password.GotFocus += RPtext;
+            username.LostFocus += AUtext;
+            password.LostFocus += APtext;
+            
+            
+        }
+        //username and password placeholder text remover
+        public void RUtext(object sender, EventArgs e)
+        {
+            if (username.Text == "Enter Your Username")
+            {
+                username.Text = "";
+                username.ForeColor = Color.Black;
+            }
+        }
+        public void RPtext(object sender, EventArgs e)
+        {
+            
+            if (password.Text == "Enter Your Password")
+            {
+
+                password.Text = "."; /*I do not know why on earth, but setting this 
+                              * to empty doesnt let the next line work and strikes an error*/
+                password.UseSystemPasswordChar = true;
+                password.Text = "";
+                password.ForeColor = Color.Black;
+            }
+        }
+        //username and password placeholder applying after leaving
+        public void AUtext(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(username.Text))
+            {
+                username.Text = "Enter Your Username";
+                username.ForeColor = Color.Gray;
+            }
+        }
+
+        public void APtext(object sender, EventArgs e)
+        {
+            
+            if (String.IsNullOrWhiteSpace(password.Text))
+            {
+                password.Text = "Enter Your Password";
+                password.UseSystemPasswordChar = false;
+                password.ForeColor = Color.Gray;
+            }
+            
         }
 
         // Switch to RegisterForm
@@ -48,10 +98,10 @@ namespace ATM_GUI
             OpenMainForm(user);
         }
 
-        //@TODO: Implement FalseInput
+        //Implement FalseInput
         private void TriggerFalseInput()
         {
-            Debug.WriteLine("Username and password do not match");
+            WrongInfo.Visible = true;
         }
 
         //@TODO: Implement OpenMainForm

@@ -18,8 +18,80 @@ namespace ATM_GUI
         public RegisterForm()
         {
             InitializeComponent();
+            //Placeholder Text for username & pass
+            username.GotFocus += RUtext;
+            password.GotFocus += RPtext;
+            username.LostFocus += AUtext;
+            password.LostFocus += APtext;
+            passconfirm.GotFocus += RPCtext; 
+            passconfirm.LostFocus += APCtext;
         }
 
+        //username and password placeholder text remover
+        public void RUtext(object sender, EventArgs e)
+        {
+            if (username.Text == "Enter Your Username")
+            {
+                username.Text = "";
+                username.ForeColor = Color.Black;
+            }
+        }
+        public void RPtext(object sender, EventArgs e)
+        {
+
+            if (password.Text == "Enter Your Password")
+            {
+
+                password.Text = "."; 
+                password.UseSystemPasswordChar = true;
+                password.Text = "";
+                password.ForeColor = Color.Black;
+            }
+        }
+        public void RPCtext(object sender, EventArgs e)
+        {
+
+            if (passconfirm.Text == "Confirm Password")
+            {
+
+                passconfirm.Text = "."; 
+                passconfirm.UseSystemPasswordChar = true;
+                passconfirm.Text = "";
+                passconfirm.ForeColor = Color.Black;
+            }
+        }
+        //username and password placeholder applying after leaving
+        public void AUtext(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(username.Text))
+            {
+                username.Text = "Enter Your Username";
+                username.ForeColor = Color.Gray;
+            }
+        }
+
+        public void APtext(object sender, EventArgs e)
+        {
+
+            if (String.IsNullOrWhiteSpace(password.Text))
+            {
+                password.Text = "Enter Your Password";
+                password.UseSystemPasswordChar = false;
+                password.ForeColor = Color.Gray;
+            }
+
+        }
+        public void APCtext(object sender, EventArgs e)
+        {
+
+            if (String.IsNullOrWhiteSpace(passconfirm.Text))
+            {
+                passconfirm.Text = "Confirm Password";
+                passconfirm.UseSystemPasswordChar = false;
+                passconfirm.ForeColor = Color.Gray;
+            }
+
+        }
         // Switch to LoginForm
         private void loginLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -44,6 +116,20 @@ namespace ATM_GUI
                 TriggerUsernameTakenError();
                 return;
             }
+            else if(user==null)
+            {
+                //condition to ensure if username is ok removes error
+                UserTaken.Visible = false;
+                if (password.Text != passconfirm.Text)
+                {
+
+                    TriggerWrongPasswordError();
+                    return;
+                }
+            }
+            //checks password
+            
+
             // Create new user
             user = new User(username.Text, password.Text);
             userController.InsertUser(user);
@@ -52,10 +138,15 @@ namespace ATM_GUI
             OpenMainForm(user);
         }
 
-        //@TODO: Implement UsernameTaken Error
+        // UsernameTaken Error 
         private void TriggerUsernameTakenError()
         {
-            Debug.WriteLine("Username taken");
+            UserTaken.Visible = true;
+        }
+        //Wrong password
+        private void TriggerWrongPasswordError()
+        {
+            passmatch.Visible = true;
         }
 
         //@TODO: Implement OpenMainForm
@@ -63,5 +154,7 @@ namespace ATM_GUI
         {
             Debug.WriteLine("Proceed to main form with user: " + user.Name);
         }
+
+       
     }
 }
