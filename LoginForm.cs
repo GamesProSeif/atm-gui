@@ -107,7 +107,8 @@ namespace ATM_GUI
         //@TODO: Implement OpenMainForm
         private void OpenMainForm(User user)
         {
-            Debug.WriteLine("Proceed to main form with user: " + user.Name);
+            new OperationChoiceForm(user).Show();
+            Close();
         }
 
     }
