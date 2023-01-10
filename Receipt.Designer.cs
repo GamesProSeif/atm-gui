@@ -89,6 +89,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(190, 20);
             this.textBox2.TabIndex = 45;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
