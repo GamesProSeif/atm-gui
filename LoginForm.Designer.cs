@@ -53,6 +53,7 @@
             this.password.TabIndex = 1;
             this.password.Text = "Enter Your Password";
             this.password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             // 
             // loginButton
             // 
@@ -62,7 +63,7 @@
             this.loginButton.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.Location = new System.Drawing.Point(152, 264);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(125, 30);
+            this.loginButton.Size = new System.Drawing.Size(134, 41);
             this.loginButton.TabIndex = 2;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = false;
@@ -78,6 +79,7 @@
             this.username.TabIndex = 0;
             this.username.Text = "Enter Your Username";
             this.username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.username.TextChanged += new System.EventHandler(this.username_TextChanged);
             // 
             // label1
             // 
@@ -89,6 +91,7 @@
             this.label1.Size = new System.Drawing.Size(90, 19);
             this.label1.TabIndex = 3;
             this.label1.Text = "Username";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -100,6 +103,7 @@
             this.label2.Size = new System.Drawing.Size(87, 19);
             this.label2.TabIndex = 4;
             this.label2.Text = "Password";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // registerLabel
             // 
@@ -127,6 +131,7 @@
             this.WrongInfo.TabIndex = 7;
             this.WrongInfo.Text = "Wrong Password or Username\r\n";
             this.WrongInfo.Visible = false;
+            this.WrongInfo.Click += new System.EventHandler(this.WrongInfo_Click);
             // 
             // panel2
             // 
@@ -137,10 +142,11 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(454, 18);
             this.panel2.TabIndex = 33;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox1.Image = global::ATM_GUI.Properties.Resources.coolbank;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -148,6 +154,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel1
             // 
@@ -159,6 +166,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(454, 89);
             this.panel1.TabIndex = 34;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // LoginForm
             // 

@@ -56,10 +56,11 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox2.Image = global::ATM_GUI.Properties.Resources.coolbank;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(454, 89);
+            this.pictureBox2.Size = new System.Drawing.Size(464, 89);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 42;
             this.pictureBox2.TabStop = false;
@@ -90,13 +91,13 @@
             // 
             // BackButton
             // 
-            this.BackButton.BackColor = System.Drawing.Color.LimeGreen;
+            this.BackButton.BackColor = System.Drawing.Color.Salmon;
             this.BackButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackButton.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackButton.Location = new System.Drawing.Point(256, 275);
+            this.BackButton.Location = new System.Drawing.Point(256, 269);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(124, 30);
+            this.BackButton.Size = new System.Drawing.Size(134, 41);
             this.BackButton.TabIndex = 44;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = false;
@@ -108,9 +109,9 @@
             this.button2000.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2000.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2000.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2000.Location = new System.Drawing.Point(256, 227);
+            this.button2000.Location = new System.Drawing.Point(256, 222);
             this.button2000.Name = "button2000";
-            this.button2000.Size = new System.Drawing.Size(124, 30);
+            this.button2000.Size = new System.Drawing.Size(134, 41);
             this.button2000.TabIndex = 45;
             this.button2000.Text = "2000";
             this.button2000.UseVisualStyleBackColor = false;
@@ -124,7 +125,7 @@
             this.button500.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button500.Location = new System.Drawing.Point(256, 175);
             this.button500.Name = "button500";
-            this.button500.Size = new System.Drawing.Size(124, 30);
+            this.button500.Size = new System.Drawing.Size(134, 41);
             this.button500.TabIndex = 46;
             this.button500.Text = "500";
             this.button500.UseVisualStyleBackColor = false;
@@ -136,9 +137,9 @@
             this.Otherbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Otherbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Otherbutton.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Otherbutton.Location = new System.Drawing.Point(75, 275);
+            this.Otherbutton.Location = new System.Drawing.Point(75, 269);
             this.Otherbutton.Name = "Otherbutton";
-            this.Otherbutton.Size = new System.Drawing.Size(124, 30);
+            this.Otherbutton.Size = new System.Drawing.Size(134, 41);
             this.Otherbutton.TabIndex = 47;
             this.Otherbutton.Text = "Other";
             this.Otherbutton.UseVisualStyleBackColor = false;
@@ -150,9 +151,9 @@
             this.button1000.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1000.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1000.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1000.Location = new System.Drawing.Point(75, 227);
+            this.button1000.Location = new System.Drawing.Point(75, 222);
             this.button1000.Name = "button1000";
-            this.button1000.Size = new System.Drawing.Size(124, 30);
+            this.button1000.Size = new System.Drawing.Size(134, 41);
             this.button1000.TabIndex = 48;
             this.button1000.Text = "1000";
             this.button1000.UseVisualStyleBackColor = false;
@@ -166,7 +167,7 @@
             this.button200.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button200.Location = new System.Drawing.Point(75, 175);
             this.button200.Name = "button200";
-            this.button200.Size = new System.Drawing.Size(124, 30);
+            this.button200.Size = new System.Drawing.Size(134, 41);
             this.button200.TabIndex = 49;
             this.button200.Text = "200";
             this.button200.UseVisualStyleBackColor = false;

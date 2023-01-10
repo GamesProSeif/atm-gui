@@ -100,9 +100,9 @@
             this.registerButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registerButton.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerButton.Location = new System.Drawing.Point(164, 288);
+            this.registerButton.Location = new System.Drawing.Point(165, 274);
             this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(124, 30);
+            this.registerButton.Size = new System.Drawing.Size(134, 41);
             this.registerButton.TabIndex = 3;
             this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = false;
@@ -188,7 +188,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox1.Image = global::ATM_GUI.Properties.Resources.coolbank;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";

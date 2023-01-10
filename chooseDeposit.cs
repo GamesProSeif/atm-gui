@@ -21,7 +21,7 @@ namespace ATM_GUI
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            new LoginForm().Show();
+            new OperationChoiceForm(user).Show();
             Close();
         }
 

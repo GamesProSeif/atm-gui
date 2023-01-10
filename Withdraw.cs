@@ -64,5 +64,14 @@ namespace ATM_GUI
             new LoginForm().Show();
             Close();
         }
+
+       
+       
+
+        private void Back_button_Click(object sender, EventArgs e)
+        {
+            new chooseWithdraw(user).Show();
+            Close();
+        }
     }
 }
