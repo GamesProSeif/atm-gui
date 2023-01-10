@@ -12,10 +12,8 @@ using SQLite;
 
 namespace ATM_GUI
 {
-    public partial class LoginForm : Form
+    internal partial class LoginForm : AtmForm
     {
-        UserController userController = new UserController();
-
         public LoginForm()
         {
             InitializeComponent();
@@ -24,9 +22,8 @@ namespace ATM_GUI
             password.GotFocus += RPtext;
             username.LostFocus += AUtext;
             password.LostFocus += APtext;
-            
-            
         }
+
         //username and password placeholder text remover
         public void RUtext(object sender, EventArgs e)
         {
@@ -49,6 +46,7 @@ namespace ATM_GUI
                 password.ForeColor = Color.Black;
             }
         }
+
         //username and password placeholder applying after leaving
         public void AUtext(object sender, EventArgs e)
         {
@@ -78,12 +76,6 @@ namespace ATM_GUI
             Close();
         }
 
-        protected override void OnClosed(EventArgs e)
-        {
-            base.OnClosed(e);
-            if (Application.OpenForms.Count == 1)
-                Application.Exit();
-        }
         private void loginButton_Click(object sender, EventArgs e)
         {
             // Attempt to find user
@@ -98,18 +90,15 @@ namespace ATM_GUI
             OpenMainForm(user);
         }
 
-        //Implement FalseInput
         private void TriggerFalseInput()
         {
             WrongInfo.Visible = true;
         }
 
-        //@TODO: Implement OpenMainForm
         private void OpenMainForm(User user)
         {
             new OperationChoiceForm(user).Show();
             Close();
         }
-
     }
 }

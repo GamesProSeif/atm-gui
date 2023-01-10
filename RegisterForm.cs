@@ -11,10 +11,8 @@ using System.Windows.Forms;
 
 namespace ATM_GUI
 {
-    public partial class RegisterForm : Form
+    internal partial class RegisterForm : AtmForm
     {
-        UserController userController = new UserController();
-
         public RegisterForm()
         {
             InitializeComponent();
@@ -36,6 +34,7 @@ namespace ATM_GUI
                 username.ForeColor = Color.Black;
             }
         }
+
         public void RPtext(object sender, EventArgs e)
         {
 
@@ -60,6 +59,7 @@ namespace ATM_GUI
                 passconfirm.ForeColor = Color.Black;
             }
         }
+
         //username and password placeholder applying after leaving
         public void AUtext(object sender, EventArgs e)
         {
@@ -92,18 +92,12 @@ namespace ATM_GUI
             }
 
         }
+
         // Switch to LoginForm
         private void loginLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             new LoginForm().Show();
             Close();
-        }
-
-        protected override void OnClosed(EventArgs e)
-        {
-            base.OnClosed(e);
-            if (Application.OpenForms.Count == 1)
-                Application.Exit();
         }
 
         private void registerButton_Click(object sender, EventArgs e)
@@ -143,13 +137,13 @@ namespace ATM_GUI
         {
             UserTaken.Visible = true;
         }
+
         //Wrong password
         private void TriggerWrongPasswordError()
         {
             passmatch.Visible = true;
         }
 
-        //@TODO: Implement OpenMainForm
         private void OpenMainForm(User user)
         {
             new OperationChoiceForm(user).Show();

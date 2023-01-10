@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using SQLite;
 
 namespace ATM_GUI
@@ -12,7 +15,7 @@ namespace ATM_GUI
     internal class UserController
     {
        
-        private string DatabasePath ="atm-gui.db3";
+        private string DatabasePath = "atm-gui.db3";
 
         public UserController()
         {
@@ -28,7 +31,8 @@ namespace ATM_GUI
         // Creates a connection to the database
         public SQLiteConnection CreateConnection()
         {
-            return new SQLiteConnection(DatabasePath, false);
+            string path = System.IO.Path.Combine(Environment.CurrentDirectory, DatabasePath);
+            return new SQLiteConnection(path, false);
         }
 
         // Inserts a user given a User object
@@ -79,6 +83,7 @@ namespace ATM_GUI
                 ModifiedAt = DateTime.Now,
                 Balance = balance
             };
+            user.Balance = balance;
             db.Update(newUser);
             db.Close();
         }
