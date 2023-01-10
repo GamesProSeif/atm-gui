@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.logoutLabel = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Back_button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +84,7 @@
             this.balance.Name = "balance";
             this.balance.Size = new System.Drawing.Size(190, 20);
             this.balance.TabIndex = 45;
+            this.balance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.balance.TextChanged += new System.EventHandler(this.balance_TextChanged);
             // 
             // label2
@@ -98,13 +100,14 @@
             // 
             // logoutLabel
             // 
+            this.logoutLabel.ActiveLinkColor = System.Drawing.Color.DarkSalmon;
             this.logoutLabel.AutoSize = true;
             this.logoutLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutLabel.LinkColor = System.Drawing.Color.White;
+            this.logoutLabel.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold);
+            this.logoutLabel.LinkColor = System.Drawing.Color.Salmon;
             this.logoutLabel.Location = new System.Drawing.Point(194, 330);
             this.logoutLabel.Name = "logoutLabel";
-            this.logoutLabel.Size = new System.Drawing.Size(74, 17);
+            this.logoutLabel.Size = new System.Drawing.Size(70, 17);
             this.logoutLabel.TabIndex = 46;
             this.logoutLabel.TabStop = true;
             this.logoutLabel.Text = "LOGOUT";
@@ -121,12 +124,27 @@
             this.panel2.Size = new System.Drawing.Size(454, 18);
             this.panel2.TabIndex = 47;
             // 
+            // Back_button
+            // 
+            this.Back_button.BackColor = System.Drawing.Color.Salmon;
+            this.Back_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Back_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Back_button.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back_button.Location = new System.Drawing.Point(161, 274);
+            this.Back_button.Name = "Back_button";
+            this.Back_button.Size = new System.Drawing.Size(134, 41);
+            this.Back_button.TabIndex = 48;
+            this.Back_button.Text = "BACK";
+            this.Back_button.UseVisualStyleBackColor = false;
+            this.Back_button.Click += new System.EventHandler(this.Back_button_Click);
+            // 
             // ShowBalance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(454, 379);
+            this.Controls.Add(this.Back_button);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.logoutLabel);
             this.Controls.Add(this.balance);
@@ -156,5 +174,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel logoutLabel;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button Back_button;
     }
 }

@@ -89,6 +89,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(190, 20);
             this.textBox2.TabIndex = 45;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -169,13 +170,14 @@
             // 
             // logoutLabel
             // 
+            this.logoutLabel.ActiveLinkColor = System.Drawing.Color.DarkSalmon;
             this.logoutLabel.AutoSize = true;
             this.logoutLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutLabel.LinkColor = System.Drawing.Color.White;
+            this.logoutLabel.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold);
+            this.logoutLabel.LinkColor = System.Drawing.Color.Salmon;
             this.logoutLabel.Location = new System.Drawing.Point(184, 333);
             this.logoutLabel.Name = "logoutLabel";
-            this.logoutLabel.Size = new System.Drawing.Size(74, 17);
+            this.logoutLabel.Size = new System.Drawing.Size(70, 17);
             this.logoutLabel.TabIndex = 52;
             this.logoutLabel.TabStop = true;
             this.logoutLabel.Text = "LOGOUT";

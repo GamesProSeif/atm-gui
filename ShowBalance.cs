@@ -36,5 +36,11 @@ namespace ATM_GUI
         {
             balance.Text = "" + user.Balance;
         }
+
+        private void Back_button_Click(object sender, EventArgs e)
+        {
+            new OperationChoiceForm(user).Show();
+            Close();
+        }
     }
 }

@@ -37,6 +37,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.logoutLabel = new System.Windows.Forms.LinkLabel();
+            this.Back_button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -83,9 +84,9 @@
             this.depositButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.depositButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.depositButton.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.depositButton.Location = new System.Drawing.Point(221, 225);
+            this.depositButton.Location = new System.Drawing.Point(254, 225);
             this.depositButton.Name = "depositButton";
-            this.depositButton.Size = new System.Drawing.Size(124, 30);
+            this.depositButton.Size = new System.Drawing.Size(134, 41);
             this.depositButton.TabIndex = 24;
             this.depositButton.Text = "DEPOSIT";
             this.depositButton.UseVisualStyleBackColor = false;
@@ -124,18 +125,33 @@
             // 
             // logoutLabel
             // 
+            this.logoutLabel.ActiveLinkColor = System.Drawing.Color.DarkSalmon;
             this.logoutLabel.AutoSize = true;
             this.logoutLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutLabel.LinkColor = System.Drawing.Color.White;
+            this.logoutLabel.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold);
+            this.logoutLabel.LinkColor = System.Drawing.Color.Salmon;
             this.logoutLabel.Location = new System.Drawing.Point(188, 301);
             this.logoutLabel.Name = "logoutLabel";
-            this.logoutLabel.Size = new System.Drawing.Size(74, 17);
+            this.logoutLabel.Size = new System.Drawing.Size(70, 17);
             this.logoutLabel.TabIndex = 5;
             this.logoutLabel.TabStop = true;
             this.logoutLabel.Text = "LOGOUT";
             this.logoutLabel.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.logoutLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logoutLabel_LinkClicked);
+            // 
+            // Back_button
+            // 
+            this.Back_button.BackColor = System.Drawing.Color.Salmon;
+            this.Back_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Back_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Back_button.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back_button.Location = new System.Drawing.Point(84, 225);
+            this.Back_button.Name = "Back_button";
+            this.Back_button.Size = new System.Drawing.Size(134, 41);
+            this.Back_button.TabIndex = 45;
+            this.Back_button.Text = "BACK";
+            this.Back_button.UseVisualStyleBackColor = false;
+            this.Back_button.Click += new System.EventHandler(this.Back_button_Click);
             // 
             // Deposit
             // 
@@ -143,6 +159,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(454, 379);
+            this.Controls.Add(this.Back_button);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logoutLabel);
             this.Controls.Add(this.panel2);
@@ -174,5 +191,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.LinkLabel logoutLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Back_button;
     }
 }

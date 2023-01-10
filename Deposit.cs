@@ -54,5 +54,12 @@ namespace ATM_GUI
             new Receipt(user, 1, amount).Show();
             Close();
         }
+
+        private void Back_button_Click(object sender, EventArgs e)
+        {
+                new chooseDeposit(user).Show();
+            Close();
+        }
+      
     }
 }
