@@ -42,5 +42,11 @@ namespace ATM_GUI
             new OperationChoiceForm(user).Show();
             Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Receipt(user).Show();
+            Close();
+        }
     }
 }

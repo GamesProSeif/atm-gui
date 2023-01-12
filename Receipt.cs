@@ -23,6 +23,14 @@ namespace ATM_GUI
             this.amount = amount;
         }
 
+        public Receipt(User user)
+        {
+            InitializeComponent();
+            this.user = user;
+            this.process = 3;
+            this.amount = user.Balance;
+        }
+
         private void Receipt_Load(object sender, EventArgs e)
         {
             username.Text = ""+user.Id;

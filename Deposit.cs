@@ -57,9 +57,8 @@ namespace ATM_GUI
 
         private void Back_button_Click(object sender, EventArgs e)
         {
-                new chooseDeposit(user).Show();
+            new chooseDeposit(user).Show();
             Close();
         }
-      
     }
 }
